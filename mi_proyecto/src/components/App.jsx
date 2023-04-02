@@ -3,7 +3,7 @@ import {Container, Form, FormControl, FormGroup, Button, ListGroup, ListGroupIte
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const TodoList = () => {
-    const titulo = "Mi to do list"
+    const titulo = "To do list"
     
     const [task, setTask] = useState([])
     const [inputValue, setInput] = useState('')
@@ -41,29 +41,29 @@ export const TodoList = () => {
     }
 
     return (
-        <Container className='text-center my-5'>
+        <Container className='my-4 contenedor'>
 
-            <h1>{titulo}</h1>
+            <h1 className='titulo'>{titulo}</h1>
 
             <Form onSubmit={addTask}>
                 <FormGroup>
-                    <FormControl type='text' placeholder='Escriba una tarea aquí...' value={inputValue} onChange={handleInputChange}>
+                    <FormControl type='text' placeholder='Escribe una tarea aquí...' value={inputValue} onChange={handleInputChange} className='input'>
                     </FormControl>
-                    <Button variant='secondary' type='submit'> Agregar tarea </Button>
+                    <Button className='botonAgregar' type='submit'> Agregar tarea </Button>
                 </FormGroup>    
             </Form>
 
-            <ListGroup>
+            <ListGroup className='my-4'>
                 {
                     task.map((task, index) => (
-                        <ListGroupItem className={`${task.completed ? 'text-decoration-line-through' : ''}`}onClick={() => {handleTaskClick(index)}} key={index}>
+                        <ListGroupItem className={`${task.completed ? 'itemTareaResuelta' : 'itemTarea'}`} onClick={() => {handleTaskClick(index)}} key={index}>
                             {task.name}
                         </ListGroupItem>
                     ))
                 }
             </ListGroup>
 
-                <div>{"Cantidad de tareas pendientes: " + count}</div>
+                <div className='my-4 cantidad'>{"Cantidad de tareas pendientes: " + count}</div>
 
         </Container>        
     )

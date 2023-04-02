@@ -1,0 +1,56 @@
+.contenedor{
+    background: url(./fondo2.avif) repeat center center;
+    background-size: contain;
+    text-align: center;
+    padding: 50px;
+}
+
+.titulo{
+    font-size: 65px;
+    color: black;
+    font-family:'Trebuchet MS';
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.input{
+    background-color: rgb(217, 230, 233);
+    justify-content: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.botonAgregar{
+    background-color: rgba(8, 8, 66, 0.829);
+    border-radius: 10px;
+    text-align: center center;
+    border: none;
+}
+
+.botonAgregar:hover{
+    background-color: rgb(27, 169, 235);
+    border: 2px solid rgba(16, 173, 179, 0.904);
+}
+
+.cantidad{
+    background-color: rgb(217, 230, 233);
+    color: rgb(10, 11, 14);
+    padding: 6px;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+}
+
+.itemTarea{
+    margin: 2px;
+    background-color: green;
+    color: white;
+
+}
+
+.itemTareaResuelta{
+    margin: 2px;
+    background-color: red;
+    color: white;
+    text-decoration: 1px solid line-through;
+}
